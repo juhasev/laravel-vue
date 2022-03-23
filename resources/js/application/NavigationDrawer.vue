@@ -9,7 +9,7 @@
         width="220"
     >
         <v-list dense class="pt-0">
-            <!-- MENU ITEMS -->
+
             <v-list-item dense v-for="item in items"
                          :key="item.id"
                          :class="isRouteActive(item.route) ? 'primary arrow_box': 'secondary menu_item'"
@@ -47,10 +47,11 @@ export default {
         activeRoute: '/',
         items: [
             {name: 'Home', route: '/', icon: 'mdi-view-dashboard'},
-            {name: 'Star', route: '/about', icon: 'mdi-star'},
+            {name: 'About', route: '/about', icon: 'mdi-information'},
         ]
 
     }),
+
     methods: {
 
         isRouteActive(route) {
@@ -72,7 +73,7 @@ export default {
 
 .arrowBox {
     position: absolute;
-    right: 0px;
+    right: 0;
 }
 
 .arrow_box {
